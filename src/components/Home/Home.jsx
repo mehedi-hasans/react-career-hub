@@ -1,8 +1,13 @@
+import Banner from "../Banner/Banner";
+import FeaturedJobs from "../Featured Jobs/FeaturedJobs";
+import JobCategory from "../Job Category/JobCategory";
 
 export default function Home() {
   return (
     <div>
-        <h1>This is home</h1>
+        <Banner/>
+        <JobCategory/>
+        <FeaturedJobs/>
     </div>
   )
 }
