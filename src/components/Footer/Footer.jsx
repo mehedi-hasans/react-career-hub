@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
+    <footer className="p-10 bg-base-content text-base-300">
+      <div className="footer max-w-6xl mx-auto">
       <aside>
         <svg
           width="50"
@@ -18,6 +19,7 @@ export default function Footer() {
           <br />
           Providing reliable tech since 1992
         </p>
+        <p>@ Copyright by mehedihasan in 2023</p>
       </aside>
       <nav>
         <header className="footer-title">Services</header>
@@ -39,6 +41,7 @@ export default function Footer() {
         <a className="link link-hover">Privacy policy</a>
         <a className="link link-hover">Cookie policy</a>
       </nav>
+      </div>
     </footer>
   );
 }
