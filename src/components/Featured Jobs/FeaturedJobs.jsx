@@ -4,6 +4,7 @@ import Job from "../Job/Job";
 
 export default function FeaturedJobs() {
   const [jobs, setJobs] = useState([]);
+  const [dataLength, setDataLength] = useState(4)
   useEffect(() => {
     fetch("jobs.json")
       .then(res => res.json())
@@ -18,8 +19,11 @@ export default function FeaturedJobs() {
       </p>
       <div className="grid md:grid-cols-2 gap-16 grid-cols-1 my-11">
         {
-            jobs.map(job => <Job key={job.id} job={job}></Job>)
+            jobs.slice(0, dataLength).map( job => <Job key={job.id} job={job}></Job>)
         }
+      </div>
+      <div className={dataLength === jobs.length && 'hidden'}>
+        <button onClick={() => setDataLength(jobs.length)} className="btn main-gradient text-white my-10 mb-16">See All Jobs</button>
       </div>
     </div>
   );
