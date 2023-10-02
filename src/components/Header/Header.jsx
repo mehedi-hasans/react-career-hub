@@ -57,7 +57,7 @@ export default function Header() {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">CareerHub</a>
+        <NavLink to='/'><a className=" font-bold text-2xl">CareerHub</a></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -84,7 +84,7 @@ export default function Header() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Star Applying</a>
+        <a className="btn main-gradient text-white">Star Applying</a>
       </div>
     </div>
   );

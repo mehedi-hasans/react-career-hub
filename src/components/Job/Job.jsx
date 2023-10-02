@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
-// eslint-disable-next-line react/prop-types
+import { Link } from "react-router-dom";
 export default function Job({ job }) {
-  // eslint-disable-next-line react/prop-types
   const {
     id,
     logo,
@@ -17,7 +17,7 @@ export default function Job({ job }) {
   return (
     <div>
       <div className="card card-compact bg-base-100 shadow-xl p-6">
-        <figure>
+        <figure className="h-[100px] w-2/5">
           <img src={logo} alt="logo" />
         </figure>
         <div className="card-body text-left gap-3">
@@ -44,9 +44,11 @@ export default function Job({ job }) {
             </span>
           </div>
           <div className="card-actions">
+            <Link to={`/job/${id}`}>
             <button className="btn main-gradient font-semibold text-lg text-white">
               View Details
             </button>
+            </Link>
           </div>
         </div>
       </div>
