@@ -31,7 +31,7 @@ export default function Header() {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 mt-2">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -60,7 +60,7 @@ export default function Header() {
         <NavLink to='/'><a className=" font-bold text-2xl">CareerHub</a></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
           {/* <li>
             <a>Home</a>
           </li>

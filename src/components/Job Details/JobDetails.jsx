@@ -1,13 +1,19 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../utility/localstorage";
 export default function JobDetails() {
   const jobs = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
   const job = jobs.find((job) => job.id === idInt);
 
+  const notify = () => {
+    saveJobApplication(idInt)
+    toast("You have applied successfully!");
+  }
   return (
     <div className="my-20">
       <div className="p-7 rounded-lg border mb-4">
@@ -88,8 +94,9 @@ export default function JobDetails() {
             </p>
           </div>
         </div>
-          <button className="btn main-gradient mt-4 w-full rounded-lg py-2 text-white font-medium text-xl">Apply Now</button>
+          <button onClick={notify} className="btn main-gradient mt-4 w-full rounded-lg py-2 text-white font-medium text-xl">Apply Now</button>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );
