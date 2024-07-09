@@ -17,7 +17,7 @@ const AppliedJobs = () => {
 
 
   return (
-    <div>Applied Jobs section {appliedJobs.length}</div>
+    <div>Applied Job section {appliedJobs.length}</div>
   )
 };
 
